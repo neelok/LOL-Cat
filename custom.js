@@ -3,9 +3,15 @@ thours = t.getHours()
 var ampm = t.getHours() >= 12 ? "PM" : "AM";
 var tcom = t.getHours() + ":" + t.getMinutes() + ":" + t.getSeconds() + " " + ampm
 document.querySelector("#headtimer").innerHTML = tcom;
+go()
+setInterval(go, 6000)
 
-var itext = document.querySelector(".image-text")
-itext.innerHTML = timeOfDay(thours)
+function go(){
+	var itext = document.querySelector(".image-text");
+	itext.innerHTML = timeOfDay(thours);
+	// alert("g");
+}
+
 
 function timeOfDay(hrs){
 	var t = ""
@@ -25,7 +31,7 @@ function runit(){
 	var i = document.querySelector("#mimage")
 	var b = document.querySelector("#butt")
 
-	var fname = "file:///C:/Users/neelo/Dropbox/Documents/Alok/Business/DataMining_Science/RealLifeProjects/projectTBD/projectTestJs/lolcat/pic01.jpg"
+	var fname = "file:///C:/Users/neelo/Dropbox/Documents/Alok/Business/DataMining_Science/RealLifeProjects/projectTBD/projectTestJs/lolcat/LOL-Cat/pic01.jpg"
 
 	if(i.src === fname){
 		i.src = "pic12.jpg";
